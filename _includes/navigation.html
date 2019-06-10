@@ -1,0 +1,36 @@
+<div class="grid--cell ws2 sm:w100 md:w-auto md:d-none js-navigation">
+    <div class="overflow-y-scroll bg-white z-nav py12 ps-fixed wmn2 t64 b0 br bc-black-2 sm:w100 sm:pb0 d-flex fd-column jc-space-between">
+        <div>
+            {% if site.data.nav[0] %}
+                {% for item in site.data.nav %}
+                    {% assign pageSlug = page.url | replace:'/',' ' %}
+
+                    {% if item.sublinks[0] %}
+                        <ul id="nav" class="list-reset">
+                        {% for entry in item.sublinks %}
+                            <li class="mb16">
+                                <div class="px16 py6 fw-bold tt-uppercase fs-fine mt16 fc-orange-500">
+                                    {{ entry.title }}
+                                </div>
+                                {% if entry.subsublinks[0] %}
+                                    <ul class="list-reset">
+                                        {% for subentry in entry.subsublinks %}
+                                            {% assign pageURL = page.url | remove: ".html" %}
+                                            <li><a class="d-block py6 px16 s-link s-link__muted w100 {% if pageURL == subentry.url or (page.id contains '/blog' and subentry.url contains '/blog') %}bg-orange-400 fc-white{% endif %}" href="{{ subentry.url }}" {% if subentry.external %}target="_blank" rel="nofollow"{% endif %}>{{ subentry.title }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="fc-black-500 fs-fine ta-center">
+            site design stolen from <a href="https://stackoverflow.design" target="_blank">Stacks</a><br />
+            built with <span class="ff-mono fc-orange-500">&lt;3</span> by <a href="https://g3rv4.com" target="_blank">g3rv4</a><br />
+            version <a href="https://github.com/g3rv4/onchro.me/commits/master" target="_blank">{{site.data.version}}</a>
+        </div>
+    </div>
+</div>

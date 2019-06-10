@@ -1,0 +1,19 @@
+# Build settings
+markdown: kramdown
+url: https://onchro.me
+baseurl: /
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]
+
+extlinks:
+  attributes: {rel: nofollow, target: _blank}
+  check_links: false #local
+#prod:  check_links: true
+  rel_exclude: ['g3rv4.com']
+  check_exclude_exact: ['https://github.com/g3rv4/onchro.me/issues/new']
+
+blogpost_url:
+  permalink: /blog-articles/:year/:month/:title/ #local
+#prod:  permalink: /blog/:year/:month/:title
+
+exclude: ["assets/less"]

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-us">
+{% include head.html %}
+
+<body>
+    {% include header.html %}
+
+    <div class="grid mx-auto w100 wmx12">
+        {% include navigation.html %}
+
+        <div class="grid--cell w90 md:w100">
+            <div id="content" class="grid jc-space-between ps-relative t64 py24 pl48 pr16 md:pl24 sm:pl16 sm:pr16">
+                <div class="grid--cell order-last w20 wmx2 pl24 sm:d-none js-secondary-nav-container d-none">
+                    <aside class="ps-sticky t64 pt16">
+                        <h5 class="mb4 fw-bold tt-uppercase fs-fine fc-orange-500 mnl1">{% if page.title == 'OnChrome Blog' %}Articles{% else %}Sections{% endif %}</h5>
+                        <ul class="list-reset grid gs8 gsy fd-column stacks-nav__secondary js-secondary-nav"></ul>
+                    </aside>
+                </div>
+                <div class="grid--cell w80 wmx8 sm:w100">
+                    {% if page.title %}
+                        <h1 class="stacks-h1 fc-orange-500">{{ page.title }}</h1>
+                    {% endif %}
+                    {% if page.description %}
+                        <p class="stacks-copy stacks-copy__lg">
+                            {{ page.description }}
+                        </p>
+                    {% endif %}
+                    {% if page.collection == 'posts' %}
+                        {{ content | remove_first:page.excerpt | extlinks:page | fixstyles }}
+                    {% else %}
+                        {{ content | remove_first:page.excerpt | extlinks:page }}
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

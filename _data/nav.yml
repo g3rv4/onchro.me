@@ -1,0 +1,21 @@
+# URLs below should be exactly the same as real paths. Just follow examples…
+- title: OnChrome
+  url: /
+  sublinks:
+    - title: Download
+      subsublinks:
+        - title: Firefox Extension
+          url: https://addons.mozilla.org/en-US/firefox/addon/onchrome/
+          external: true
+        - title: Native Applications (required)
+          url: /native-applications
+          external: false
+        - title: Source Code
+          url: https://github.com/g3rv4/OnChrome
+          external: true
+    - title: Get in touch
+      subsublinks:
+        - title: Contribute!
+          url: /contribute
+        - title: Report bugs
+          url: /bugs
