@@ -13,6 +13,10 @@
         - title: Source Code
           url: https://github.com/g3rv4/OnChrome
           external: true
+    - title: OnChrome
+      subsublinks:
+        - title: Why so many permissions?
+          url: /permissions
     - title: Get in touch
       subsublinks:
         - title: Contribute!

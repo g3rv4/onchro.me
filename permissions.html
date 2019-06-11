@@ -1,0 +1,13 @@
+---
+layout: default
+title: Why so many permissions?
+description: The extension asks for access to ALL THE SITES I VISIT. Why?
+---
+
+<p class="stacks-copy">On 0.2, <a href="https://github.com/g3rv4/OnChrome/commit/6bbf56a8bb992936f0dbc1487ad6227cd2773c28" target="_blank" rel="nofollow">I introduced</a> a bunch of permissions to the extension. Including access to all the urls you ever visit.</p>
+
+<p class="stacks-copy">I thought a lot before doing it. On June 11th, Google started redirecting hangout links to meet. When that happened, OnChrome was notified about the url change after Firefox was already on the Meet site... which caused OnChrome to open the Meet url on Chrome.</p>
+
+<p class="stacks-copy">The most reliable way to make it work is using <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeRequest" target="_blank" rel="nofollow">the blocking ability of webRequest</a>... so that OnChrome can block requests to any url that matches the specified patterns. Unfortunately, to do so OnChrome needs to have access to that particular site. And since I want to let folks use any url there (I want to do that myself) I need the &lt;all_urls&gt; privilege</all_urls>.</p>
+
+<p class="stacks-copy">I prioritized my use case since... I built this extension for myself :) if you don't trust me (you would be entirely reasonable by doing so) you can download the source code from <a href="https://github.com/g3rv4/OnChrome/tree/master/extension" target="_blank" rel="nofollow">the extension folder</a> and load <i>that</i> into Firefox.</p>
