@@ -17,6 +17,8 @@
       subsublinks:
         - title: Why so many permissions?
           url: /permissions
+        - title: OS Warnings
+          url: /os-warnings
     - title: Get in touch
       subsublinks:
         - title: Contribute!
