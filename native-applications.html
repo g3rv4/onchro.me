@@ -6,27 +6,20 @@ description: OnChrome needs a native application to connect to Chrome. Download 
 
 <p class="stacks-copy">The only way for an extension to connect to an application on your machine is via <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Native_messaging">Native Messaging</a>. OnChrome needs to do exactly that to open Chrome.</p>
 
-<p class="stacks-copy">The native application needs to be registered (a procedure that's different based on your OS) before it can be accessed from an extension. That's why you need to register it before it can be used.</p>
-
 <p class="stacks-copy">You can view <a href="https://github.com/g3rv4/OnChrome/tree/master/app">the source code</a> and compile them yourself if you prefer. I'm providing the binaries because I assume it's going to be the easiest route for 99% of the users.</p>
 
 <section class="stacks-section">
     {% header h2 | Installation %}
-    <p class="stacks-copy">Install the extension from the <a href="https://addons.mozilla.org/en-US/firefox/addon/onchrome/">Firefox add on store</a>.</p>
+    <p class="stacks-copy">Install the extension from the <a href="https://addons.mozilla.org/en-US/firefox/addon/onchrome/">Firefox add-on store</a>.</p>
 
     {% header h3 | macOS %}
-    <p class="stacks-copy">The application is signed by me and notarized by Apple. GateKeeper will show a <a href="/os-warnings#macos">not horrible message</a>.</p>
-    <ol>
-        <li class="stacks-copy">Download <a href="/assets/app/macOS/0.3/OnChrome.dmg" class="js-anchor">OnChrome.dmg</a></li>
-        <li class="stacks-copy">Open the dmg file and copy the application somewhere (it can be anywhere). <strong>Don't run it from the DMG! that's going to fail.</strong></li>
-        <li class="stacks-copy">Once you copied it somewhere, open it in its new destination (you will see a <a href="/os-warnings#macos">Gatekeeper message</a> saying it was downloaded from internet, and that Apple checked it for malicious software and none was found).</li>
-        <li class="stacks-copy">Press 1 to register it</li>
-    </ol>
+    <p class="stacks-copy">Download and install <a href="https://files.onchro.me/deploy/1.0.0/macOS/OnChrome.pkg" class="js-anchor">OnChrome.pkg</a>.</p>
     {% header h3 | Windows %}
-    <p class="stacks-copy">The application is signed, but Windows shows a warning because I don't have enough reputation.</p>
+    <p class="stacks-copy">The application is signed, but Windows shows <a href="/os-warnings">a warning</a> because I don't have enough reputation.</p>
     <ol>
-        <li class="stacks-copy">Download <a href="/assets/app/win64/0.3/OnChrome.exe" class="js-anchor">OnChrome.exe</a> and save it somewhere</li>
-        <li class="stacks-copy">Execute it (here's where you'll see a warning. <a href="/os-warnings">Read about it</a> before proceeding)</li>
-        <li class="stacks-copy">Press 1 to register it</li>
+        <li class="stacks-copy">Download and execute <a href="https://files.onchro.me/deploy/1.0.0/win64/OnChrome.msi" class="js-anchor">OnChrome.msi</a>.</li>
+        <li class="stacks-copy">You will see a blue screen saying that Windows protected your PC. Click on "More info".</li>
+        <li class="stacks-copy">Verify that it shows my name.</li>
+        <li class="stacks-copy">Click on "Run anyway".</li>
     </ol>
 </section>
