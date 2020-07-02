@@ -12,8 +12,4 @@ extlinks:
   rel_exclude: ['g3rv4.com']
   check_exclude_exact: ['https://github.com/g3rv4/onchro.me/issues/new']
 
-blogpost_url:
-  permalink: /blog-articles/:year/:month/:title/ #local
-#prod:  permalink: /blog/:year/:month/:title
-
-exclude: ["assets/less"]
+exclude: ["assets/less", "*.config"]
