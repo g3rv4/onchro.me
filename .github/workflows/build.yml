@@ -8,6 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - uses: Azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - uses: Azure/get-keyvault-secrets@v1.0
+      with:
+        keyvault: "ActionsBuild"
+        secrets: 'OctopusServerUrl, OctopusApiKey'
+      id: azureSecrets
 
     - name: Set variables
       shell: pwsh
@@ -68,4 +76,4 @@ jobs:
         rm nuget.config
 
         dotnet tool install --global Octopus.DotNet.Cli
-        dotnet-octo create-release --project onchro.me --deployto Dev --server "${{ secrets.OCTOPUS_SERVER_URL }}" --apiKey "${{ secrets.OCTOPUS_API_KEY }}" --progress
+        dotnet-octo create-release --project onchro.me --deployto Dev --server "${{ steps.azureSecrets.outputs.OctopusServerUrl }}" --apiKey "${{ steps.azureSecrets.outputs.OctopusApiKey }}" --progress
