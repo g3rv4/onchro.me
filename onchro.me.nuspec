@@ -3,7 +3,7 @@
     <metadata>
         <id>onchro.me</id>
         <version>1.0.1</version>
-        <description>Site for onchro.me</description>
+        <description>Site for onchrome.gervas.io</description>
         <authors>Gervasio Marchand Cassataro</authors>
         <repository type="git" url="https://github.com/g3rv4/onchro.me.git" />
     </metadata>

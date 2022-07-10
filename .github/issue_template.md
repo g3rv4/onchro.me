@@ -1,4 +1,4 @@
-# This repository contains the code of onchro.me (the website)
+# This repository contains the code of onchrome.gervas.io (the website)
 
 Are you sure you want to report an issue with the site? if you want to report a problem with the extension, please do so on the [g3rv4/OnChrome](https://github.com/g3rv4/OnChrome) repository (where the code for the extension lives).
 

@@ -1,6 +1,6 @@
 # Build settings
 markdown: kramdown
-url: https://onchro.me
+url: https://onchrome.gervas.io
 baseurl: /
 kramdown:
     smart_quotes: ["apos", "apos", "quot", "quot"]
